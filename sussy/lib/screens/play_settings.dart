@@ -26,12 +26,12 @@ class _PlaySettingsState extends State<PlaySettings> {
       backgroundColor: Colors.black,
       body: SingleChildScrollView(
         child: Padding(
-          padding: const EdgeInsets.only(top: 100, left: 16, right: 16),
+          padding: const EdgeInsets.only(top: 60, left: 16, right: 16),
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
-              mainTittle(),
+              mainTittle(context),
               playersCount(),
               SizedBox(
                 height: 24,
@@ -96,12 +96,12 @@ class _PlaySettingsState extends State<PlaySettings> {
             );
   }
 
-  Row mainTittle() {
+  Row mainTittle(BuildContext context) {
     return Row(
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
         Padding(
-          padding: const EdgeInsets.only(bottom: 50),
+          padding: const EdgeInsets.only(bottom: 36),
           child: Container(
             decoration: BoxDecoration(
               color: AppColors.secondary,
@@ -111,13 +111,25 @@ class _PlaySettingsState extends State<PlaySettings> {
               width: 300,
               height: 100,
               child: Center(
-                child: Text(
-                  "Jugar",
-                  style: TextStyle(
-                    fontFamily: 'dream',
-                    fontSize: 50,
-                    color: AppColors.accent,
-                  ),
+                child: Row(
+                  children: [
+                    IconButton(
+                      onPressed: (){
+                        Navigator.pop(context);
+                      }, 
+                      icon: Icon(
+                        Icons.arrow_back_sharp,
+                        color: AppColors.accent,
+                        size: 50,)),
+                    Text(
+                      "Jugar",
+                      style: TextStyle(
+                        fontFamily: 'dream',
+                        fontSize: 40,
+                        color: AppColors.accent,
+                      ),
+                    ),
+                  ],
                 ),
               ),
             ),

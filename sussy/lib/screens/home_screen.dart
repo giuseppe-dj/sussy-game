@@ -1,40 +1,45 @@
 import 'package:flutter/material.dart';
+import 'package:sussy/screens/lists_view.dart';
 import 'package:sussy/screens/play_settings.dart';
 import 'package:sussy/theme/app_colors.dart';
-
-// anyadir push del boton de jugar
-// anyadior el otro push y hacer la pagina para crear listas y verlas
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return Column(
-      crossAxisAlignment: CrossAxisAlignment.center,
-      mainAxisAlignment: MainAxisAlignment.center,
-      children: [
-        mainTittle(),
-        Padding(
-          padding: const EdgeInsets.only(left: 16, right: 16),
-          child: Row(
-            mainAxisAlignment: MainAxisAlignment.spaceAround,
-            
-            children: [
-              playButton(context),
-              listButton()
-            ],
-          ),
-        )
-      ],
+    return Scaffold(
+      backgroundColor: Colors.black,
+      body: mainColumn(context),
     );
+  }
+
+  Column mainColumn(BuildContext context) {
+    return Column(
+    crossAxisAlignment: CrossAxisAlignment.center,
+    mainAxisAlignment: MainAxisAlignment.center,
+    children: [
+      mainTittle(),
+      Padding(
+        padding: const EdgeInsets.only(left: 16, right: 16),
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.spaceAround,
+          
+          children: [
+            playButton(context),
+            listButton(context)
+          ],
+        ),
+      )
+    ],
+  );
   }
 
   ElevatedButton playButton(BuildContext context) {
     return ElevatedButton(onPressed: (){
             Navigator.push(
               context, 
-              MaterialPageRoute(builder: (context) => const PlaySettings(),
+              MaterialPageRoute(builder: (context) => PlaySettings(),
               ));
           }, 
           style: ElevatedButton.styleFrom(
@@ -51,9 +56,12 @@ class HomeScreen extends StatelessWidget {
             size: 100,));
   }
 
-  ElevatedButton listButton() {
+  ElevatedButton listButton(BuildContext context) {
     return ElevatedButton(onPressed: (){
-            // accion boton LISTAS
+            Navigator.push(
+              context,
+              MaterialPageRoute(builder: (context) => LView()
+              ));
           }, 
           style: ElevatedButton.styleFrom(
             backgroundColor: AppColors.secondary,

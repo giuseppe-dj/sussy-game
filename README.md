@@ -1,2 +1,3 @@
-**Imposter game**
-Que bonito es jugar al impostor ahora que puedes poner tus opciones sin que personas malintencionadas te hagan pagar por esa posibilidad
+**Sussy game**
+Que bonito es jugar al impostor con tus propias palabras sin tener que pagar.
+Juego clásico del impostor de libre uso, desarrolo basado en Flutter.

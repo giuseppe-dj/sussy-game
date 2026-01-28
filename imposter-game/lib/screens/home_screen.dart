@@ -93,11 +93,11 @@ class HomeScreen extends StatelessWidget {
                 padding: const EdgeInsets.all(8.0),
                 child: Text(
                   textAlign: TextAlign.center,
-                  "Sussy game",
+                  "Imposter game",
                   style: TextStyle(
                     color: AppColors.accent,
                     fontFamily: 'dream',
-                    fontSize: 50
+                    fontSize: 32
                   ),),
               ),
             ),

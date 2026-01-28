@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:sussy/screens/home_screen.dart';
-import 'package:sussy/screens/lists_view.dart';
 import 'package:sussy/theme/app_colors.dart';
 
 void main() {

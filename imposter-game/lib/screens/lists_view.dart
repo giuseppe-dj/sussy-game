@@ -59,7 +59,7 @@ class _LViewState extends State<LView> {
                         color: AppColors.accent,
                         size: 50,)),
                     Text(
-                      "Listas",
+                      " Lists",
                       style: TextStyle(
                         fontFamily: 'dream',
                         fontSize: 40,

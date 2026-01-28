@@ -50,7 +50,7 @@ class _PlaySettingsState extends State<PlaySettings> {
               width: double.infinity,
               child: Center(
                 child: NumberSelector(
-                  title: "Jugadores",
+                  title: "Players",
                   value:
                       players, 
                   onIncrement: () {
@@ -75,7 +75,7 @@ class _PlaySettingsState extends State<PlaySettings> {
               width: double.infinity, 
               child: Center(
                 child: NumberSelector(
-                  title: "Impostores",
+                  title: "Imposters",
                   value:
                       impostors, 
                   onIncrement: () {
@@ -122,7 +122,7 @@ class _PlaySettingsState extends State<PlaySettings> {
                         color: AppColors.accent,
                         size: 50,)),
                     Text(
-                      "Jugar",
+                      " Play",
                       style: TextStyle(
                         fontFamily: 'dream',
                         fontSize: 40,
